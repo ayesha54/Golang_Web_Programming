@@ -17,7 +17,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	err = tpl.ExecuteTemplate(os.Stdout, "index.html", nil)
+	err = tpl.ExecuteTemplate(os.Stdout, "index.html", "John")
 	if err != nil {
 		log.Fatalln(err)
 	}
