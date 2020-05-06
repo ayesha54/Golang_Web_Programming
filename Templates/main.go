@@ -6,6 +6,11 @@ import (
 	"text/template"
 )
 
+type person struct {
+	fname string
+	lname string
+}
+
 var tpl *template.Template
 
 func init() {
@@ -21,7 +26,15 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	err = tpl.ExecuteTemplate(os.Stdout, "home.html", nil)
+
+	//fruits := []string{"apple", "banana", "mango"}
+	//ages := map[string]int{"john": 45, "jonas": 42}
+	p1 := person{
+		"jane",
+		"hilton",
+	}
+
+	err = tpl.ExecuteTemplate(os.Stdout, "home.html", p1)
 	if err != nil {
 		log.Fatalln(err)
 	}

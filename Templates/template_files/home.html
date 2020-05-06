@@ -6,7 +6,31 @@
 </head>
 
 <body>
+
     <h1>Hello Home</h1>
+    <ul>
+        {{range $i, $item := .}}
+        <li>{{$i}} {{$item}}</li>
+        {{end}}
+    </ul>
+    <ul>
+        {{range .}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+    <ul>
+        {{range $k,$v := .}}
+        <li>{{$k}} : {{$v}}</li>
+        {{end}}
+
+    </ul>
+
+
+    <ul>
+
+        <li>{{.}}</li>
+
+    </ul>
 </body>
 
 </html>
